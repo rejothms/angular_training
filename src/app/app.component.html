@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+ < <h1>
+    {{ num1 + num2 }}
+    {{addNumber()}}
+  </h1>
+  <ul>
+    <li>name: {{user.name}}</li>
+    <li *ngIf="user.details.phone">name: {{user.details.phone}}</li>
+    <li *ngIf="user.details.email">email: {{user.details.email}}</li>
+  </ul>
+   {{title}}
+  {{username}}
+
+  <input [(ngModel)]="username" />
+
+<button (click)="updateDom()">Update</button>
+
+  <img src={{imgUrl}} />
+ </div>
+
+ <app-login [items]="user" (disp)="checkUpdate($event)"></app-login>
+
+<router-outlet></router-outlet>
