@@ -1,24 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
- < <h1>
-    {{ num1 + num2 }}
-    {{addNumber()}}
-  </h1>
-  <ul>
-    <li>name: {{user.name}}</li>
-    <li *ngIf="user.details.phone">name: {{user.details.phone}}</li>
-    <li *ngIf="user.details.email">email: {{user.details.email}}</li>
-  </ul>
-   {{title}}
-  {{username}}
+ 
 
-  <input [(ngModel)]="username" />
+  <div *ngIf="value ==='bineesh'">
+  
+    <h1>
+      Welcome to {{value}}
+    </h1>
 
-<button (click)="updateDom()">Update</button>
+  </div>
 
-  <img src={{imgUrl}} />
- </div>
+<ul>
+  <li *ngFor="let item of items; let i=index;let od=odd;" [ngStyle]="{'background-color':od?'red':'green'}">
+ 
+    {{item}}   {{i}}  {{od}}
 
- <app-login [items]="user" (disp)="checkUpdate($event)"></app-login>
+  </li>
+</ul>
 
-<router-outlet></router-outlet>
+
+  <img [src]="imageSrc" />
+
+  <input [(ngModel)]="value" />
+
+  <button (click)="onClickBtn()">click</button>
+
+  <app-login></app-login>
+ 
+</div>
