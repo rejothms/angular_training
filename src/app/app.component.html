@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
  
 
   <div *ngIf="value ==='bineesh'">
@@ -24,7 +24,26 @@
   <input [(ngModel)]="value" />
 
   <button (click)="onClickBtn()">click</button>
+ -->
 
-  <app-login></app-login>
- 
+<div>
+
+  <div>
+
+    <button>select</button>
+<div>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+    </ul>
+  </div> a
+  </div>
+
+  <p [appTheme]="color">hello ang</p>
+
+  <app-login [loginTitle]="lTitle" (disp)="userLogin($event)"></app-login>
+
+  <!-- <app-login [loginTitle]="value" (disp)="userLogin($event)"></app-login> -->
+
+  <app-form></app-form>
 </div>

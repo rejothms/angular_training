@@ -7,14 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  private title = 'angular!';
+  private lTitle = 'angular!';
   private num1 = 10;
   private num2 = 20;
   private imageSrc = "https://static.javatpoint.com/tutorial/angular7/images/angular-7-logo.png";
 
   public items: Array<number>;
-  public value = 'bineesh';
-
+  public value = 'react';
+  public color = 'green';
+ 
   constructor() {
 
     this.items = [1, 2, 3, 4];
@@ -22,8 +23,12 @@ export class AppComponent {
   }
 
   public onClickBtn() {
-    this.value = "arun";
+   // this.value = "arun";
 
+  }
+
+  public userLogin(user) {
+    console.log(user);
   }
 
 }

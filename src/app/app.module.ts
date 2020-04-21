@@ -6,11 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { from } from 'rxjs';
 import { LoginComponent } from './components/login/login.component';
+import { FormComponent } from './components/form/form.component';
+import { AuthenicationService } from './services/authenication.service';
+import { ThemeDirective } from './directives/theme.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    FormComponent,
+    ThemeDirective
   ],
   imports: [
     BrowserModule,
