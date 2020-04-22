@@ -9,13 +9,19 @@ import { LoginComponent } from './components/login/login.component';
 import { FormComponent } from './components/form/form.component';
 import { AuthenicationService } from './services/authenication.service';
 import { ThemeDirective } from './directives/theme.directive';
+import { TestDirective } from './directives/test.directive';
+import { SlideshowDirective } from './directives/slideshow.directive';
+import { ArfilterPipe } from './pipes/arfilter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     FormComponent,
-    ThemeDirective
+    ThemeDirective,
+    TestDirective,
+    SlideshowDirective,
+    ArfilterPipe
   ],
   imports: [
     BrowserModule,

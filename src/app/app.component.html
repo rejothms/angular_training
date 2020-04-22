@@ -1,5 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- <div style="text-align:center">
+
+  {}
  
 
   <div *ngIf="value ==='bineesh'">
@@ -25,10 +27,7 @@
 
   <button (click)="onClickBtn()">click</button>
  -->
-
-<div>
-
-  <div>
+  <!-- <div>
 
     <button>select</button>
 <div>
@@ -37,11 +36,47 @@
       <li>2</li>
     </ul>
   </div> a
-  </div>
+  </div> -->
+<div>
 
-  <p [appTheme]="color">hello ang</p>
+  {{bDay | date: 'MM/dd/yy h:mm a'}}
 
-  <app-login [loginTitle]="lTitle" (disp)="userLogin($event)"></app-login>
+  {{'100' | currency: 'USD'}}
+
+  {{user | json | uppercase}}
+
+  <ul>
+
+    <li *ngFor="let patient of (patients | arfilter: 10)">
+
+    {{patient.place}} - {{patient.count}}
+  </li>
+  </ul>
+
+
+ <!--  <ul>
+
+    <li *appSlideshow="let image from images; let ctrl=controller">
+      <img [src]="image" />
+      <button (click)="ctrl.prev()">Prev</button>
+      <button (click)="ctrl.next()">next</button>
+    </li>
+
+  </ul> -->
+
+
+
+  <ul>
+  <li *appTest="let item from items in value  let i = index;">
+    {{item}} - {{i}}
+  </li>
+
+</ul>
+
+
+  <!-- <p [appTheme]="color">hello ang</p>
+
+  <app-login [loginTitle]="lTitle" (disp)="userLogin($event)"></app-login> -->
 
   <!-- <app-login [loginTitle]="value" (disp)="userLogin($event)"></app-login> -->
 
